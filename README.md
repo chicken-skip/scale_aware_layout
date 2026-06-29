@@ -7,7 +7,7 @@
 **Other packages shrink the text. `scale_aware_layout` keeps the text and adapts
 the layout — the accessibility-correct way to kill `RenderFlex` overflow.**
 
-![Plain Flutter overflows while scale_aware_layout reflows Row to Column as the text scale increases](https://raw.githubusercontent.com/chicken-skip/scale_aware_layout/main/docs/demo.gif)
+![Plain Flutter overflows while scale_aware_layout reflows Row to Column as the text scale increases](https://raw.githubusercontent.com/chicken-skip/scale_aware_layout/main/doc/demo.gif)
 
 ▶ **[Live demo](https://chicken-skip.github.io/scale_aware_layout/)** · 📦 [pub.dev](https://pub.dev/packages/scale_aware_layout)
 
