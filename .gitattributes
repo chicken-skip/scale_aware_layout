@@ -1,0 +1,6 @@
+# Normalize line endings to LF so `dart format --set-exit-if-changed` is stable
+# across Windows dev and Linux CI.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ico binary
