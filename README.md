@@ -7,10 +7,7 @@
 **Other packages shrink the text. `scale_aware_layout` keeps the text and adapts
 the layout — the accessibility-correct way to kill `RenderFlex` overflow.**
 
-{{BEFORE_AFTER_GIF}}
-<!-- Human: drag the system text scale 100% -> 200%. Left: plain Flutter shows
-the yellow/black overflow stripes. Right: the Row reflows into a Column and
-stays readable. 5–8s loop, "Before / After" labels. -->
+![Plain Flutter overflows while scale_aware_layout reflows Row to Column as the text scale increases](https://raw.githubusercontent.com/chicken-skip/scale_aware_layout/main/docs/demo.gif)
 
 ▶ **[Live demo](https://chicken-skip.github.io/scale_aware_layout/)** · 📦 [pub.dev](https://pub.dev/packages/scale_aware_layout)
 
@@ -19,8 +16,6 @@ stays readable. 5–8s loop, "Before / After" labels. -->
 When a user turns up their system font size for accessibility, Flutter raises
 `MediaQuery.textScaler`. Horizontal layouts that assumed default text overflow —
 the dreaded yellow-and-black stripes, clipped labels, broken screens.
-
-{{PROBLEM_SCREENSHOT}}
 
 The usual "fixes" are wrong: shrinking the font (`auto_size_text`) throws away
 the user's explicit choice, and width-based responsive libraries
