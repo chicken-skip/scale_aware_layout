@@ -12,7 +12,7 @@ the layout — the accessibility-correct way to kill `RenderFlex` overflow.**
 the yellow/black overflow stripes. Right: the Row reflows into a Column and
 stays readable. 5–8s loop, "Before / After" labels. -->
 
-▶ **[Live demo]({{LIVE_DEMO_URL}})** · 📦 [pub.dev](https://pub.dev/packages/scale_aware_layout)
+▶ **[Live demo](https://chicken-skip.github.io/scale_aware_layout/)** · 📦 [pub.dev](https://pub.dev/packages/scale_aware_layout)
 
 ## The problem
 
