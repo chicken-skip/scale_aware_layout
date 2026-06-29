@@ -9,4 +9,7 @@
 library;
 
 // Public API is exported here. Implementation lives under `lib/src/` and is
-// not exported directly. Symbols are added milestone by milestone.
+// not exported directly.
+
+export 'src/scale_aware_builder.dart';
+export 'src/text_scale_tier.dart';
