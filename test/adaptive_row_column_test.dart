@@ -61,4 +61,56 @@ void main() {
     );
     expect(find.text('solo'), findsOneWidget);
   });
+
+  testWidgets('spacing inserts gaps with no trailing gap (Row)',
+      (tester) async {
+    await tester.pumpWidget(
+      _wrap(
+        1.0,
+        const AdaptiveRowColumn(spacing: 8, children: _children),
+      ),
+    );
+    // 3 children -> exactly 2 interior gaps, none after the last.
+    expect(find.byType(SizedBox), findsNWidgets(2));
+  });
+
+  testWidgets('spacing inserts gaps with no trailing gap (Column)',
+      (tester) async {
+    await tester.pumpWidget(
+      _wrap(
+        2.0,
+        const AdaptiveRowColumn(spacing: 8, children: _children),
+      ),
+    );
+    expect(find.byType(SizedBox), findsNWidgets(2));
+  });
+
+  testWidgets('no spacing widgets when spacing is 0', (tester) async {
+    await tester.pumpWidget(
+      _wrap(1.0, const AdaptiveRowColumn(children: _children)),
+    );
+    expect(find.byType(SizedBox), findsNothing);
+  });
+
+  testWidgets(
+      'respects RTL: children keep logical order, laid out right-to-left',
+      (tester) async {
+    await tester.pumpWidget(
+      const MediaQuery(
+        data: MediaQueryData(textScaler: TextScaler.linear(1.0)),
+        child: Directionality(
+          textDirection: TextDirection.rtl,
+          child: AdaptiveRowColumn(spacing: 8, children: _children),
+        ),
+      ),
+    );
+    // Logical (semantic) order is preserved...
+    final texts =
+        tester.widgetList<Text>(find.byType(Text)).map((t) => t.data).toList();
+    expect(texts, ['A', 'B', 'C']);
+    // ...but visually the first child sits to the right of the last child.
+    final firstDx = tester.getCenter(find.text('A')).dx;
+    final lastDx = tester.getCenter(find.text('C')).dx;
+    expect(firstDx, greaterThan(lastDx));
+  });
 }
