@@ -12,5 +12,6 @@ library;
 // not exported directly.
 
 export 'src/adaptive_row_column.dart';
+export 'src/overflow_guard.dart';
 export 'src/scale_aware_builder.dart';
 export 'src/text_scale_tier.dart';
