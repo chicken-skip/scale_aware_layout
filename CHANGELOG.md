@@ -1,3 +1,9 @@
+## 0.1.1
+
+- Docs: route the Code of Conduct contact through GitHub's private reporting
+  instead of an email address.
+- No API changes.
+
 ## 0.1.0
 
 Initial release.
