@@ -1,8 +1,8 @@
 name: scale_aware_layout
 description: >-
-  Keep the user's text scale and reflow layout structure (Row -> Column) to
-  prevent overflow at large accessibility font sizes. The accessibility-correct
-  alternative to shrinking text.
+  Keep the user's text scale and reflow Row to Column to prevent overflow at
+  large accessibility font sizes. The accessibility-correct alternative to
+  shrinking text.
 version: 0.1.0
 repository: https://github.com/chicken-skip/scale_aware_layout
 issue_tracker: https://github.com/chicken-skip/scale_aware_layout/issues
