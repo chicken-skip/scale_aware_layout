@@ -34,8 +34,10 @@ Examples of unacceptable behavior include:
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the maintainer at **nfkilito123@gmail.com**. All complaints will be
-reviewed and investigated promptly and fairly.
+reported confidentially to the maintainer through GitHub: open a
+[private report](https://github.com/chicken-skip/scale_aware_layout/security/advisories/new)
+or, for non-sensitive matters, a regular issue. All complaints will be reviewed
+and investigated promptly and fairly.
 
 ## Attribution
 
